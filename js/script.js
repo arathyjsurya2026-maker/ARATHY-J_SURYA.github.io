@@ -1,5 +1,21 @@
 "use strict";
 
+// Start decorative motion only when a working pause control is available.
+const hero = document.querySelector(".hero");
+const motionToggle = document.querySelector(".motion-toggle");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+function syncMotionPreference() {
+  hero.classList.toggle("motion-enabled", !reducedMotion.matches);
+  motionToggle.hidden = reducedMotion.matches;
+}
+motionToggle.addEventListener("click", () => {
+  const paused = hero.classList.toggle("is-motion-paused");
+  motionToggle.setAttribute("aria-pressed", String(paused));
+  motionToggle.textContent = paused ? "Resume background animation" : "Pause background animation";
+});
+reducedMotion.addEventListener("change", syncMotionPreference);
+syncMotionPreference();
+
 // Mobile navigation supports keyboard dismissal and restores focus on Escape.
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".navigation");
