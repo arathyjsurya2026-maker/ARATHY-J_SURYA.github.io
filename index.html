@@ -13,16 +13,15 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="nav-shell">
-      <a class="wordmark" href="./" aria-label="Arathy J Surya home">ARATHY J SURYA<span>.</span></a>
+      <a class="wordmark" href="./" aria-label="Arathy J Surya home">ARATHY J SURYA</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation">
         <span></span><span></span>
       </button>
       <nav class="navigation" id="navigation" aria-label="Main navigation">
-        <!-- Section links are ready for the next stage of the portfolio. -->
-        <a href="#about" data-upcoming="About">About</a>
+        <!-- Navigation links point to the sections below. -->
+        <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#experience" data-upcoming="Experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
         <a class="contact-button" href="#contact">Get in Touch <span aria-hidden="true">↗</span></a>
@@ -31,58 +30,39 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="about" aria-labelledby="hero-title" tabindex="-1">
       <div class="hero-content">
         <div class="role-badge"><span class="status-dot" aria-hidden="true"></span>Final-Semester CS Student · Aspiring Software Engineer</div>
-        <h1 id="hero-title">Building Digital<br>Experiences with<br><span class="gradient-text">Code &amp; Creativity</span></h1>
-        <p class="hero-description">Final-semester B.Tech Computer Science student with a strong foundation in Python, C++, data structures and algorithms, object-oriented programming, database management systems, operating systems, and computer networks. Passionate about applying these fundamentals to build efficient, user-focused applications.</p>
+        <h1 id="hero-title">Arathy J Surya</h1>
+        <p class="hero-role">Aspiring Software Engineer</p>
+        <p class="hero-description">Final-semester B.Tech Computer Science student with a strong foundation in Python, C++, data structures and algorithms, object-oriented programming, database management systems, operating systems, and computer networks. Interested in entry-level software development opportunities.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#projects">View Projects <span class="arrow" aria-hidden="true">→</span></a>
           <a class="button button-secondary" href="assets/documents/arathy-j-surya-resume.pdf" download="Arathy-J-Surya-Resume.pdf">Download Resume <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg></a>
         </div>
-        <div class="hero-note"><span aria-hidden="true"></span>Thoughtful code. Meaningful experiences.</div>
       </div>
 
-      <!-- Local portrait framed by decorative, CSS-only animated rings. -->
+      <!-- A simple portrait keeps the introduction focused on the candidate. -->
       <div class="hero-visual">
-        <div class="visual-grid" aria-hidden="true"></div>
-        <div class="orbit-system">
-          <div class="orbit orbit-outer" aria-hidden="true"></div>
-          <div class="orbit orbit-middle" aria-hidden="true"></div>
-          <div class="orbit orbit-inner" aria-hidden="true"></div>
-          <div class="orbital-path orbital-path-one" aria-hidden="true"><span></span></div>
-          <div class="orbital-path orbital-path-two" aria-hidden="true"><span></span></div>
-          <div class="core-halo" aria-hidden="true"></div>
-          <img class="hero-portrait" src="assets/images/arathy-j-surya.jpeg" alt="Arathy J Surya" width="1254" height="1254" fetchpriority="high">
-          <div class="code-core" aria-hidden="true"><span>&lt;/&gt;</span></div>
-          <span class="star star-one" aria-hidden="true"></span><span class="star star-two" aria-hidden="true"></span><span class="star star-three" aria-hidden="true"></span>
-        </div>
-        <div class="code-label label-top" aria-hidden="true"><span class="label-dot"></span>idea<span class="label-divider">/</span>code<span class="label-divider">/</span>create</div>
-        <div class="code-label label-bottom" aria-hidden="true"><span class="mini-code">{ }</span> Built with curiosity<span class="label-cursor">_</span></div>
-        <span class="visual-coordinate" aria-hidden="true">01 / INFINITE POSSIBILITIES</span>
+        <img class="hero-portrait" src="assets/images/arathy-j-surya.jpeg" alt="Arathy J Surya" width="1254" height="1254" fetchpriority="high">
       </div>
-      <div class="hero-bottom" aria-hidden="true"><span>DESIGNED TO MAKE A DIFFERENCE</span><span class="bottom-line"></span><span>CREATE. REFINE. REPEAT.</span></div>
     </section>
     <!-- Core skills are grouped by subject rather than arbitrary proficiency scores. -->
     <section class="portfolio-section" id="skills" aria-labelledby="skills-title" tabindex="-1">
-      <p class="section-eyebrow">01 / THE FOUNDATION</p>
-      <h2 id="skills-title">Skills &amp; <span class="gradient-text">Foundations</span></h2>
+      <h2 id="skills-title">Technical Skills</h2>
       <p class="section-description">The languages and computer science fundamentals behind my approach to building software.</p>
       <div class="skills-grid">
         <article class="skill-card">
-          <span class="card-symbol" aria-hidden="true">&lt;/&gt;</span>
           <h3>Programming</h3>
           <p>Turning ideas into clear, structured solutions.</p>
           <ul class="tag-list"><li>Python</li><li>C++</li><li>Object-oriented programming</li><li>Software development</li></ul>
         </article>
         <article class="skill-card">
-          <span class="card-symbol" aria-hidden="true">{ }</span>
           <h3>Problem Solving</h3>
           <p>Breaking down problems and reasoning about efficient solutions.</p>
           <ul class="tag-list"><li>Data structures</li><li>Algorithms</li><li>Problem solving</li><li>System design</li></ul>
         </article>
         <article class="skill-card">
-          <span class="card-symbol" aria-hidden="true">[ : ]</span>
           <h3>Computer Science</h3>
           <p>Understanding how data, systems, and connected applications work.</p>
           <ul class="tag-list"><li>Database management systems</li><li>Operating systems</li><li>Computer networks</li></ul>
@@ -91,15 +71,13 @@
     </section>
     <!-- Project descriptions reflect the supplied CV; add repository links when available. -->
     <section class="portfolio-section" id="projects" aria-labelledby="projects-title" tabindex="-1">
-      <p class="section-eyebrow">02 / PUTTING IDEAS INTO PRACTICE</p>
-      <h2 id="projects-title">Technical <span class="gradient-text">Projects</span></h2>
+      <h2 id="projects-title">Technical Projects</h2>
       <p class="section-description">Practical applications that bring together problem solving, data management, and user-focused features.</p>
       <div class="projects-grid">
         <article class="project-card">
           <a class="project-image-link" href="assets/images/020347e1-4757-4015-8fd4-2eccdb02902c.png" target="_blank" rel="noopener" aria-label="View RailChart artwork at full size (opens in a new tab)">
             <img class="project-image" src="assets/images/020347e1-4757-4015-8fd4-2eccdb02902c.png" alt="RailChart project artwork showing a train station and desktop and mobile ticket booking interfaces" width="1536" height="1024" loading="lazy" decoding="async">
           </a>
-          <span class="project-number">PROJECT / 01</span>
           <h3>RailChart</h3>
           <p class="project-subtitle">Online Railway Ticket Booking System</p>
           <p>A railway booking application with user authentication, train search, seat availability, ticket booking, and cancellation. Integrated database management for user information, train schedules, booking records, and passenger journey details.</p>
@@ -109,7 +87,6 @@
           <a class="project-image-link" href="assets/images/17d3d201-5cf0-4718-aab0-de8d06437b6e.png" target="_blank" rel="noopener" aria-label="View GATE CSE Analyser artwork at full size (opens in a new tab)">
             <img class="project-image" src="assets/images/17d3d201-5cf0-4718-aab0-de8d06437b6e.png" alt="GATE CSE Analyser project artwork showing a laptop dashboard with mock tests, practice quizzes, and performance charts" width="1536" height="1024" loading="lazy" decoding="async">
           </a>
-          <span class="project-number">PROJECT / 02</span>
           <h3>GATE CSE Analyser</h3>
           <p class="project-subtitle">Exam Preparation &amp; Performance Analysis</p>
           <p>A GATE Computer Science preparation platform with mock tests and practice quizzes. Score tracking and performance analysis help students evaluate their progress as they prepare for the exam.</p>
@@ -119,8 +96,7 @@
     </section>
     <!-- Dates and institutions follow the CV; current status reflects the final semester. -->
     <section class="portfolio-section" id="education" aria-labelledby="education-title" tabindex="-1">
-      <p class="section-eyebrow">03 / ACADEMIC JOURNEY</p>
-      <h2 id="education-title"><span class="gradient-text">Education</span></h2>
+      <h2 id="education-title">Education</h2>
       <p class="section-description">An academic foundation in computer science, strengthened through practical learning.</p>
       <div class="education-list">
         <article class="education-card">
@@ -144,8 +120,7 @@
     </section>
     <!-- Direct contact links work on GitHub Pages without a backend. -->
     <section class="portfolio-section" id="contact" aria-labelledby="contact-title" tabindex="-1">
-      <p class="section-eyebrow">04 / LET’S CONNECT</p>
-      <h2 id="contact-title">Get in <span class="gradient-text">Touch</span></h2>
+      <h2 id="contact-title">Contact</h2>
       <p class="section-description">Have an opportunity, a project idea, or a question? I’d love to hear from you.</p>
       <address class="contact-grid">
         <a class="contact-card" href="mailto:jayasuryaarathy@gmail.com">
@@ -171,6 +146,5 @@
       </address>
     </section>
   </main>
-  <div class="notification" id="notification" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>

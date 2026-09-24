@@ -27,27 +27,10 @@ document.addEventListener("click", (event) => {
 
 window.matchMedia("(max-width: 850px)").addEventListener("change", () => setMenuOpen(false));
 
-// Replace these notices with section anchors as the remaining sections are added.
-const notification = document.getElementById("notification");
-let notificationTimer;
-
-function showNotice(message) {
-  clearTimeout(notificationTimer);
-  notification.textContent = message;
-  notification.classList.add("is-visible");
-  notificationTimer = setTimeout(() => {
-    notification.classList.remove("is-visible");
-    notification.textContent = "";
-  }, 4500);
-}
-
+// Close the mobile menu when navigating to a section.
 document.querySelectorAll('a[href^="#"]:not(.skip-link)').forEach((link) => {
-  link.addEventListener("click", (event) => {
+  link.addEventListener("click", () => {
     const destination = document.querySelector(link.getAttribute("href"));
-    if (!destination && link.dataset.upcoming) {
-      event.preventDefault();
-      showNotice(`${link.dataset.upcoming} section coming soon.`);
-    }
     if (navigation.contains(link) && menuToggle.getAttribute("aria-expanded") === "true") {
       setMenuOpen(false);
       if (destination) {
