@@ -36,12 +36,11 @@ button, a { touch-action: manipulation; }
 
 /* Clear introduction with a restrained accent and a static portrait. */
 .hero { position: relative; isolation: isolate; overflow: hidden; max-width: 1360px; margin: auto; padding: 88px 56px; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 72px; align-items: center; scroll-margin-top: 28px; }
-/* Low-contrast light and fine lines move slowly behind the content. */
+/* Locally generated looping GIF; a still frame is used when motion is off. */
 .hero-background { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
-.hero-background::before { content: ""; position: absolute; inset: -15%; background: radial-gradient(ellipse at 75% 45%, #335d8930, transparent 52%), repeating-linear-gradient(120deg, transparent 0 119px, #96b5d608 120px, transparent 121px); animation: background-drift 28s ease-in-out infinite alternate; animation-play-state: paused; }
-.hero.motion-enabled .hero-background::before { animation-play-state: running; }
-.hero.is-motion-paused .hero-background::before { animation-play-state: paused; }
-@keyframes background-drift { from { transform: translate(-2%, -1%); } to { transform: translate(3%, 2%); } }
+.hero-background::before { content: ""; position: absolute; inset: 0; background: url("../assets/images/professional-background.png") center / cover no-repeat; opacity: .7; }
+.hero-background::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #080b12db, #080b1260 65%, #080b1220); }
+.hero.motion-enabled:not(.is-motion-paused) .hero-background::before { background-image: url("../assets/images/professional-background.gif"); }
 .motion-toggle { position: absolute; bottom: 14px; right: 28px; min-height: 36px; padding: 8px 12px; border: 1px solid #ffffff20; border-radius: 6px; background: #10151e; color: var(--muted); font-size: 11px; cursor: pointer; }
 .motion-toggle:hover { color: var(--text); border-color: #7895c780; }
 .hero-intro { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.7; }
@@ -141,6 +140,7 @@ a.contact-card:hover { border-color: #6c8de366; }
 @media (max-width: 850px) { .contact-grid { grid-template-columns: 1fr; } }
 /* Respect reduced-motion preferences for navigation and hover transitions. */
 @media (prefers-reduced-motion: reduce) {
+  .hero.motion-enabled:not(.is-motion-paused) .hero-background::before { background-image: url("../assets/images/professional-background.png"); }
   .motion-toggle { display: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
